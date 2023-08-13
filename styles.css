@@ -55,7 +55,7 @@ header{
 .fondo{
     --opacidad-negro:0.5;
     background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), 
-    rgba(0, 0, 0, var(--opacidad-negro))),url('Fcomparsa.jpeg');
+    rgba(0, 0, 0, var(--opacidad-negro))),url('img/Fcomparsa.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
@@ -122,19 +122,10 @@ header{
     display: flex;
     flex-wrap: wrap;
 }
-.padre{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(252, 247, 241);
-    width: auto;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 .titulo3{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    text-align: center;
     padding: 5px;
     font-size: 30px;
     
@@ -154,13 +145,27 @@ header{
     width: 100%;
     box-shadow: 0 0 20px rgba(23, 24, 23, 0.568);
     border-radius: 5px;
-   
+    
+}
+
+
+/* modificacion fotos------------------------------------------------------------------------------------*/
+.padre{
+    display: flex;
+    background-color: rgb(252, 247, 241);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(23, 24, 23, 0.1);
+}
+input[type=radio]{
+    display: none;
 }
 .columna8{
    
     color: #0a0901;
     padding: 10px;
-    width: 48%;
+    width: 50%;
     margin: 5px; /*separar los textos*/
     display: flex;
     flex-wrap: wrap;
@@ -170,21 +175,71 @@ header{
     line-height: 1.5em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.columna9{
-    
-    padding: 10px;
-    width: 45%;
-    margin: 10px; /*separar los textos*/
+.container_card{
+    width: 50%;
+    height: auto;
+    transform-style: preserve-3d;
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 25px;
-    
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding-top: 30px;
 }
+.target{
+    width: 100%;
+    height: 50%;
+    display: flex;
+   padding: 10px;
+}
+.card{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 10px;
+}
+
+.carrusel{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(23, 24, 23, 0.568);
+}
+
+
+#item-2:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-3,
+#item-3:checked ~ .cards #selector-2{
+    transform: translateY(-80%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-3:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-2,
+#item-2:checked ~ .cards #selector-3{
+    transform: translateY(80%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #selector-1,
+#item-2:checked ~ .cards #selector-2,
+#item-3:checked ~ .cards #selector-3{
+    transform: translateY(0) scale(1);
+    z-index: 1;
+}
+/*----------------------------------------------------------------------------------------------*/
+
 .padre-table{
     display: flex;
     flex-wrap: wrap;
     background-image: linear-gradient(rgba(223, 224, 228, 0.5),rgba(223,228,228,0.50)), 
-    url('iglesia.jpg');
+    url('img/iglesia.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #ffffff;
@@ -192,6 +247,16 @@ header{
     margin: 0 auto;
     padding: 10px;
     border-radius: 10px;
+}
+.tittle-table{
+    height: 30px;
+    width: auto;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    padding: 10px;
+  
 }
 /* comienzo de edicion de la tabla*/
 .content-table{
@@ -202,13 +267,13 @@ header{
     box-shadow: 0 0 20px rgba(23, 24, 23, 0.568);
     align-items: center;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 10px;
     align-content: center;
     height: 700px;
     width: 70%;   
 }
 .content-table thead tr{
-    background-image: url("pañoleta.jpeg");
+    background-image: url("img/pañoleta.jpeg");
     background-color:#980081;
     color: #ffffff;
     text-align: center;
@@ -373,7 +438,19 @@ header{
     color: transparent;  
     -webkit-background-clip:border-box
 }
+/* comienza el responsive*/
 @media(max-width:1021px){
+    .padre{
+        display: flex;
+        flex-wrap:wrap;
+        background-color: rgb(252, 247, 241);
+        width: auto;
+        height: auto;
+        padding: 10px;
+        align-content: center;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(23, 24, 23, 0.1);
+    }
     .columna8{
         color: #0a0901;
         padding: 10px;
@@ -387,24 +464,79 @@ header{
         line-height: 1.5em;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-    .columna9{
+    .container_card{
     
         padding: 10px;
         width: 100%;
-        margin: 20px; /*separar los textos*/
+        height: 400px;
+        margin: 0px auto; /*separar los textos*/
         display: flex;
         flex-wrap: wrap;
-        margin-top: 25px;
+        align-content: center;
+        margin: 0px auto;
+        align-content: center;
+
+    }
+    .target{
+        width: 80%;
+        height: 80%;
+        display: flex;
+       padding: 10px;
+       margin: 0px auto;
+    }
+    .card{
+        position: absolute;
+        width: 50%;
+        height: auto;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        margin: 15px;
+        margin: 0px auto;
         
+        
+    }
+    .carrusel{
+        width:100%;
+        height: 300px;
+        border-radius: 10px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        box-shadow: 0 0 20px rgba(23, 24, 23, 0.568);
+        justify-content: center;
+    }
+    
+    #item-2:checked ~ .cards #selector-1,
+    #item-1:checked ~ .cards #selector-3,
+    #item-3:checked ~ .cards #selector-2{
+    transform: translateX(-80%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+    }
+
+    #item-3:checked ~ .cards #selector-1,
+    #item-1:checked ~ .cards #selector-2,
+    #item-2:checked ~ .cards #selector-3{
+    transform: translateX(80%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+    }
+
+    #item-1:checked ~ .cards #selector-1,
+    #item-2:checked ~ .cards #selector-2,
+    #item-3:checked ~ .cards #selector-3{
+    transform: translateX(0) scale(1);
+    z-index: 1;
     }
     .columna-video{
     
         padding: 10px;
         width: 90%;
         margin: 2px; /*separar los textos*/
-        display: inline-block;
+        display: block;
         margin-top:10px;
         align-content: center;
+        
     }
     .columna-copla{
         color: #0a0901;
@@ -426,6 +558,20 @@ header{
         border-radius: 3px;
         
     }
+    .content{
+        width: 2px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+    }
+    .content:hover{
+        cursor: crosshair;
+        width: 300px;
+        opacity: 1;
+        filter: contrast(120%);
+        transition: 1s;
+    }
+
 }
 @media(max-width:840px){
     .parrafo{
@@ -461,6 +607,7 @@ header{
 
         
     }
+   
     
 }
 @media(max-width:640px){
@@ -492,6 +639,7 @@ header{
         transition: width 0.2s ease-in;
         text-decoration: none;
         color: inherit;
+        
     }
     .link::before{
         position: absolute;
@@ -539,4 +687,33 @@ header{
         width: 100%;
         font-size:x-large;
     }
+    .columna-copla{
+        color: #0a0901;
+        padding: 10px;
+        width: 90%;
+        margin: 10px; /*separar los textos*/
+        display: inline-block;
+        text-align: center;
+        font-size: 35px;
+        line-height: 1.0em;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    }
+    .titulo2{
+        color: antiquewhite;
+        justify-content: center;
+        align-items: center;
+        margin-top: -15px;
+        height: 40px;
+        display: block;
+        text-align: center;
+    }
+    .fondo{
+        --opacidad-negro:0.6;
+        background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), 
+        rgba(0, 0, 0, var(--opacidad-negro))),url('iglesia.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:100%;
+    }
+  
 }
