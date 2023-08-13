@@ -122,6 +122,18 @@ header{
     display: flex;
     flex-wrap: wrap;
 }
+<<<<<<< HEAD
+=======
+.padre{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(252, 247, 241);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
 .titulo3{
     display: flex;
     flex-wrap: wrap;
@@ -438,6 +450,7 @@ input[type=radio]{
     color: transparent;  
     -webkit-background-clip:border-box
 }
+<<<<<<< HEAD
 /* comienza el responsive*/
 @media(max-width:1021px){
     .padre{
@@ -451,6 +464,9 @@ input[type=radio]{
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(23, 24, 23, 0.1);
     }
+=======
+@media(max-width:1021px){
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
     .columna8{
         color: #0a0901;
         padding: 10px;
@@ -464,6 +480,7 @@ input[type=radio]{
         line-height: 1.5em;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+<<<<<<< HEAD
     .container_card{
     
         padding: 10px;
@@ -527,16 +544,33 @@ input[type=radio]{
     #item-3:checked ~ .cards #selector-3{
     transform: translateX(0) scale(1);
     z-index: 1;
+=======
+    .columna9{
+    
+        padding: 10px;
+        width: 100%;
+        margin: 20px; /*separar los textos*/
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
     }
     .columna-video{
     
         padding: 10px;
         width: 90%;
         margin: 2px; /*separar los textos*/
+<<<<<<< HEAD
         display: block;
         margin-top:10px;
         align-content: center;
         
+=======
+        display: inline-block;
+        margin-top:10px;
+        align-content: center;
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
     }
     .columna-copla{
         color: #0a0901;
@@ -558,6 +592,7 @@ input[type=radio]{
         border-radius: 3px;
         
     }
+<<<<<<< HEAD
     .content{
         width: 2px;
         flex-grow: 1;
@@ -572,6 +607,8 @@ input[type=radio]{
         transition: 1s;
     }
 
+=======
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
 }
 @media(max-width:840px){
     .parrafo{
@@ -607,7 +644,10 @@ input[type=radio]{
 
         
     }
+<<<<<<< HEAD
    
+=======
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
     
 }
 @media(max-width:640px){
@@ -639,7 +679,10 @@ input[type=radio]{
         transition: width 0.2s ease-in;
         text-decoration: none;
         color: inherit;
+<<<<<<< HEAD
         
+=======
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
     }
     .link::before{
         position: absolute;
@@ -687,6 +730,7 @@ input[type=radio]{
         width: 100%;
         font-size:x-large;
     }
+<<<<<<< HEAD
     .columna-copla{
         color: #0a0901;
         padding: 10px;
@@ -717,3 +761,6 @@ input[type=radio]{
     }
   
 }
+=======
+}
+>>>>>>> 3599b9845d229f9c10ac10e82859690258eea4b6
